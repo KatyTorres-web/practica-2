@@ -1,0 +1,126 @@
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
+
+/* Contenedor de las cards */
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    text-decoration: none;
+    color: #222;
+
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+
+    min-height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título de la card */
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Efecto cuando pasas el mouse */
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+
+    background-color: #f5f7ff;
+}
+
+/* Efecto al hacer clic */
+.card:active {
+    transform: scale(0.95);
+}
+
+/* Responsive para tablets */
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+/* Responsive para celulares */
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    body {
+        padding: 20px;
+    }
+}
